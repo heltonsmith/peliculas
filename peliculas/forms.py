@@ -9,3 +9,7 @@ class PersonaForm(forms.ModelForm):
         widgets = {
             'clave': forms.PasswordInput(),
         }
+
+class PersonaLoginForm(forms.Form):
+    email = forms.EmailField()
+    clave = forms.CharField(widget=forms.PasswordInput)
